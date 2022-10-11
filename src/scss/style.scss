@@ -14,6 +14,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    padding: 0;
     
 }
 a {
@@ -31,6 +32,7 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
     height: 100vh;
     background-image: url(../images/cover.jpg);
     background-position: center;
@@ -172,10 +174,9 @@ header {
     text-align: center;
 
     @media all and (min-width: 768px) {
-        width: 768px;
         height: 397px;
-        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px 0 0;
     }
 
     .h2-2 {
@@ -185,7 +186,10 @@ header {
         text-transform: capitalize;
 
         @media all and (min-width: 768px) {
-            grid-row-start: 1/4;
+            grid-column: 1 /span 4;
+            text-align: center;
+            margin: 0 auto;
+            
         }
         
     }
@@ -195,6 +199,10 @@ header {
         line-height: 27px;
         color: var(--black);
 
+        @media all and (min-width: 768px) {
+            padding: 0;
+        }
+
         .title1 {
             font-family: 'Roboto Slab';
             font-size: 18px;
@@ -202,19 +210,17 @@ header {
         
         .text-2 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+            
             
         }
         .title2 {
             font-family: 'Roboto Slab';
-            font-size: 17.5px;
+            font-size: 18px;
             
         }
         .text-3 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+            
         }
         .title3 {
             font-family: 'Roboto Slab';
@@ -222,10 +228,25 @@ header {
         }
         .text-4 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+           
         
 
+        }
+
+        .title1, .title2, .title3 {
+            @media all and (min-width: 768px) {
+                font-size: 21px;
+                padding-bottom: 10px;
+            }
+
+        }
+        .text-1, .text-2, .text-3, .text-4 {
+            padding: 0 100px;
+
+            @media all and (min-width: 768px) {
+                padding: 0 20px;
+                font-size: 20px;
+            }
         }
     }
     
@@ -245,16 +266,33 @@ header {
             text-transform: initial;
     
         }
+
+        @media all and (min-width: 768px) {
+            grid-row: 3;
+            grid-column: 2;
+        }
     }
-    .arrow-icon-up {
-        width: 45px;
-        height: 45px;
-        background-color: var(--white);
-        padding: 10px 12.6px 10px 12.6px;
-        border-radius: 50%;
-        transform: translateY(27px);
-        
+
+    a {
+        @media all and (min-width: 768px) {
+            grid-row: 4;
+            grid-column: 2;
+        }
+        .arrow-icon-up {
+            width: 45px;
+            height: 45px;
+            background-color: var(--white);
+            padding: 10px 12.6px 10px 12.6px;
+            border-radius: 50%;
+            transform: translateY(27px);
+
+            @media all and (min-width: 768px) {
+                transform: translateY(32.5px);
+            }
+        }
+
     }
+
 }
 footer {
     background-color: #304268;
@@ -262,8 +300,12 @@ footer {
     line-height: 30px;
 
     @media all and (min-width: 768px) {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        
+    }
+    @media all and (min-width: 1280px) {
+        padding: 0 150px;
     }
     
     
@@ -275,18 +317,32 @@ footer {
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
-        
+
+        @media all and (min-width: 768px) {
+            grid-column: 2;
+            grid-row: 1;
+            
+        }
+        &.dos {
+            @media all and (min-width: 768px) {
+                grid-column: 3;
+                grid-row: 1;
+            }
+        }
 
         .list-1 {
             padding: 65px 124px 20px 124px;
             text-align: center;
-            
+
+            @media all and (min-width: 768px) {
+                padding-top: 32.5px;
+                
+            }
         }
         .list-2 {
             padding: 0 87px 70px 87px;
             text-align: center;
         }
-    
     }
 
     .copy {
@@ -299,6 +355,11 @@ footer {
         text-transform: lowercase;
         line-height: 35px;
         transform: translateY(-30px);
+
+        @media all and (min-width: 768px) {
+            grid-column: 1;
+            grid-row: 1;
+        }
        
     }
     

@@ -2,7 +2,15 @@ footer {
     background-color: #304268;
     color: var(--white);
     line-height: 30px;
-    
+
+    @media all and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        
+    }
+    @media all and (min-width: 1280px) {
+        padding: 0 150px;
+    }
     
     
     .menu {
@@ -13,18 +21,32 @@ footer {
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
-        
+
+        @media all and (min-width: 768px) {
+            grid-column: 2;
+            grid-row: 1;
+            
+        }
+        &.dos {
+            @media all and (min-width: 768px) {
+                grid-column: 3;
+                grid-row: 1;
+            }
+        }
 
         .list-1 {
             padding: 65px 124px 20px 124px;
             text-align: center;
-            
+
+            @media all and (min-width: 768px) {
+                padding-top: 32.5px;
+                
+            }
         }
         .list-2 {
             padding: 0 87px 70px 87px;
             text-align: center;
         }
-    
     }
 
     .copy {
@@ -37,6 +59,12 @@ footer {
         text-transform: lowercase;
         line-height: 35px;
         transform: translateY(-30px);
-    
+
+        @media all and (min-width: 768px) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+       
     }
-}
+    
+ }

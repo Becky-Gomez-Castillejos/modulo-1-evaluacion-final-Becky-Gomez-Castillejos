@@ -7,11 +7,24 @@
     row-gap: 35px;
     text-align: center;
 
+    @media all and (min-width: 768px) {
+        height: 397px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 30px 0 0;
+    }
+
     .h2-2 {
         font-size: 27px;
         font-family: 'Roboto Slab';
         margin: 29px 15px 0 15px;
         text-transform: capitalize;
+
+        @media all and (min-width: 768px) {
+            grid-column: 1 /span 4;
+            text-align: center;
+            margin: 0 auto;
+            
+        }
         
     }
     .part {
@@ -20,6 +33,10 @@
         line-height: 27px;
         color: var(--black);
 
+        @media all and (min-width: 768px) {
+            padding: 0;
+        }
+
         .title1 {
             font-family: 'Roboto Slab';
             font-size: 18px;
@@ -27,19 +44,17 @@
         
         .text-2 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+            
             
         }
         .title2 {
             font-family: 'Roboto Slab';
-            font-size: 17.5px;
+            font-size: 18px;
             
         }
         .text-3 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+            
         }
         .title3 {
             font-family: 'Roboto Slab';
@@ -47,9 +62,25 @@
         }
         .text-4 {
             font-family: 'Roboto';
-            padding-right: 100px;
-            padding-left: 100px;
+           
+        
 
+        }
+
+        .title1, .title2, .title3 {
+            @media all and (min-width: 768px) {
+                font-size: 21px;
+                padding-bottom: 10px;
+            }
+
+        }
+        .text-1, .text-2, .text-3, .text-4 {
+            padding: 0 100px;
+
+            @media all and (min-width: 768px) {
+                padding: 0 20px;
+                font-size: 20px;
+            }
         }
     }
     
@@ -69,14 +100,31 @@
             text-transform: initial;
     
         }
+
+        @media all and (min-width: 768px) {
+            grid-row: 3;
+            grid-column: 2;
+        }
     }
-    .arrow-icon-up {
-        width: 45px;
-        height: 45px;
-        background-color: var(--white);
-        padding: 10px 12.6px 10px 12.6px;
-        border-radius: 50%;
-        transform: translateY(27px);
-        
+
+    a {
+        @media all and (min-width: 768px) {
+            grid-row: 4;
+            grid-column: 2;
+        }
+        .arrow-icon-up {
+            width: 45px;
+            height: 45px;
+            background-color: var(--white);
+            padding: 10px 12.6px 10px 12.6px;
+            border-radius: 50%;
+            transform: translateY(27px);
+
+            @media all and (min-width: 768px) {
+                transform: translateY(32.5px);
+            }
+        }
+
     }
+
 }

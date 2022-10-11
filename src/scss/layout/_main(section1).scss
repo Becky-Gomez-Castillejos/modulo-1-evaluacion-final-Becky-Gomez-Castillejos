@@ -7,6 +7,13 @@
     height: 100%;
     margin: 15px;
     padding-bottom: 25px;
+
+    @media all and (min-width: 768px) {
+        padding: 0 50px 55px 50px;
+        margin: 0;
+        line-height: 35px;
+        transform: translateY(-5px);
+    }
     
 
     .span {
@@ -25,6 +32,11 @@
         padding-bottom: 23px;
         text-transform: capitalize;
 
+        @media all and (min-width: 768px) {
+            font-size: 25.5px;
+            transform: translateY(-7px);
+        }
+
     }
     .text-1 {
         font-family: 'Roboto';
@@ -33,6 +45,10 @@
         line-height: 28px;
         padding-right: 20px;
         padding-bottom: 25px;
+
+        @media all and (min-width: 768px) {
+            font-size: 18.5px;
+        }
 
     }
     .button1 {
@@ -43,6 +59,11 @@
         color: #f26002;
         background-color: var(--white);
         padding: 9px 23px 9px 23px;
+
+        @media all and (min-width: 768px) {
+            width: 87.5px;
+            height: 45px;
+        }
     
     }
 }
