@@ -1,1 +1,42 @@
+footer {
+    background-color: #304268;
+    color: var(--white);
+    line-height: 30px;
+    
+    
+    
+    .menu {
+        font-family: 'Roboto';
+        font-size: 14.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        
 
+        .list-1 {
+            padding: 65px 124px 20px 124px;
+            text-align: center;
+            
+        }
+        .list-2 {
+            padding: 0 87px 70px 87px;
+            text-align: center;
+        }
+    
+    }
+
+    .copy {
+        font-family: 'Roboto';
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: lowercase;
+        line-height: 35px;
+        transform: translateY(-30px);
+    
+    }
+}

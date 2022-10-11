@@ -1,6 +1,52 @@
 header {
     display: flex;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     height: 100vh;
-    color
+    background-image: url(../images/cover.jpg);
+    background-position: center;
+    background-size: cover;
+
+    h1 {
+        font-size: 12vw;
+        font-family: 'Roboto Slab', serif;
+        color: var(--white);
+        word-spacing: 100vw;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        transform: translateY(-70px);
+
+    }
+    p {
+        font-size: 4.5vw;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: var(--white);
+        padding-bottom: 10px;
+        transform: translateY(-60px);
+
+    }
+    .arrow-icon-down {
+        width: 40px;
+        height: 40px;
+        background-color: var(--white);
+        padding: 14px 10.6px 11px 10.6px;
+        border-radius: 50%;
+        transform: rotate(-0.23deg);
+        transform: translateY(-32px);
+
+    }
+    .icon-menu {
+        transform: translateX(-50px);
+        transform: translateY(-750px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
 }
